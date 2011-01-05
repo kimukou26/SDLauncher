@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    version="2.5">
+
+<!--
+    <context-param>
+          <param-name>PARAM_NAME</param-name>
+          <param-value>PARAM_VALUE</param-value>
+	</context-param>
+-->
+
+<!--
+    <filter>
+        <filter-name>FILTER_NAME</filter-name>
+        <filter-class>FILTER_CLASS</filter-class>
+        <init-param>
+          <param-name>PARAM_NAME</param-name>
+          <param-value>PARAM_VALUE</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FILTER_NAME</filter-name>
+        <url-pattern>URL_PATTERN</url-pattern>
+    </filter-mapping>
+-->
+
+<!--
+	<listener>
+		<listener-class>LISTENER_CLASS</listener-class>
+	</listener>
+-->
+
+<!--
+    <servlet>
+        <servlet-name>SERVLET_NAME</servlet-name>
+        <servlet-class>SERVLET_CLASS</servlet-class>
+        <init-param>
+            <param-name>PARAM_NAME</param-name>
+            <param-value>PARAM_VALUE</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SERVLET_NAME</servlet-name>
+        <url-pattern>URL_PATTERN</url-pattern>
+    </servlet-mapping>
+-->
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

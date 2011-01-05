@@ -1,0 +1,17 @@
+Compile of griffon-0.9.2-beta-1
+
+HudsonAssembler
+	
+	Owners: @kiy0taka
+		http://code.google.com/p/hudson-assembler/
+	note:	
+		http://d.hatena.ne.jp/masanobuimai/20091025/1256474442
+
+
+HudsonBrowser
+	Owners: @masanobuimai
+		http://code.google.com/p/intellimars/source/browse/#svn/trunk/griffon/HudsonBrowser
+
+	note:
+		http://d.hatena.ne.jp/masanobuimai/20090123/1232719193
+
