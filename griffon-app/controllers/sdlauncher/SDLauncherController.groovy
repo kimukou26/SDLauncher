@@ -73,4 +73,3 @@ class SDLauncherController {
         println "workfSet:${model.workf}"
     }
 }
-

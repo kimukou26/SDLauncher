@@ -72,4 +72,3 @@ frame.windowDeactivated={
     if(frame.visible)return
 }
 
-
