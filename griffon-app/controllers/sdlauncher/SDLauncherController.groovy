@@ -20,16 +20,19 @@ class SDLauncherController {
        service.mvcGroupInit(args)
     }
 
-    void mvcGroupDestroy(Map args) {
+    void mvcGroupDestroy() {
       app.execOutside {
           //griffon.effects.Effects.dropOut(view.frame, wait: true)
           griffon.effects.Effects.puff(view.frame, wait: true)
           //griffon.effects.Effects.fade(view.frame, wait: true)
           app.shutdown()
       }
+			Map args = [controller:app.config.controller,
+									service:app.config.service,
+									view:app.config.view,
+									model:app.config.model]
       service.mvcGroupDestroy(args)
     }
-
     
     def quit={
       app.execOutside {
