@@ -12,4 +12,4 @@ JAVA_OPS=$JAVA_OPS -XX:SurvivorRatio=8 -XX:MaxTenuringThreshold=8 -XX:TargetSurv
 JAVA_OPS=$JAVA_OPS -Djava.net.preferIPv4Stack=true -Dava.net.preferIPv6Addresses=false
 JAVA_OPS=$JAVA_OPS -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dsun.lang.ClassLoader.allowArraySyntax=true
 
-$JAVA_HOME/bin/java $JAVA_OPS -jar HudsonBrowser.jar --hudsonUrl=http://localhost:9090/hudson
+$JAVA_HOME/bin/java $JAVA_OPS -jar HudsonBrowser.jar --hudsonUrl=http://localhost:38080/jenkins

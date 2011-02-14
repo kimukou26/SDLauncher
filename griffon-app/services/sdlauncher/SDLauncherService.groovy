@@ -37,8 +37,9 @@ class SDLauncherService {
       def argsList = []
       def argsSet = [:]
       app.getStartupArgs().each{
-          //println "${it}"
+          println "${it}"
           String val = it
+/*
 //griffon run-app Provisional correspondence  start==>
           if(val.startsWith("'--help")){
             val = val.replaceAll("'","")
@@ -81,13 +82,25 @@ class SDLauncherService {
             String[] sp = val.split("=")
             println "(${sp[0]},${sp[1]})"
             argsSet.put(sp[0],sp[1])  //Map Add
-
           }
+*/
+          if(val.startsWith("--help")){
+            argsList.add val
+          }
+					else{
+		        if(!val.startsWith("--webAppContext")){
+		          argsList.add val
+		        }
+		        String[] sp = val.split("=")
+		        println "(${sp[0]},${sp[1]})"
+		        argsSet.put(sp[0],sp[1])  //Map Add
+					}
       }
-
-      controller.doOutside {
-        start argsList,argsSet
-      }
+			println "==>${argsList.dump()}"
+			println "==>${argsSet.dump()}"
+      //controller.doOutside {
+      start argsList,argsSet
+      //}
     }
 
     void mvcGroupDestroy(Map args) {
@@ -145,7 +158,7 @@ class SDLauncherService {
         else{
           webAppContext= val.split(";")
         }
-        println webAppContext
+        println "webAppContext=$webAppContext"
         webAppContext.each{
           String[] sp = it.split(":")
           String[] spPath = null
@@ -158,12 +171,14 @@ class SDLauncherService {
           }
           def context 
           if(spPath.length>=2){
+						println "<==${sp[0]},${spPath[0]},${spPath[1]}"
             context = new WebAppContext(sp[0],spPath[0],spPath[1])
           }
           else{
+						println "<==${sp[0]},${spPath[0]}"
             context = new WebAppContext(sp[0],spPath[0])
           }
-          println context
+          println "context=$context"
           model.loader.addWebAppContext(context);
         }
       }
