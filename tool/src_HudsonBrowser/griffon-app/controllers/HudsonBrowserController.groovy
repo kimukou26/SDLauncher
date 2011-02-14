@@ -15,6 +15,7 @@ class HudsonBrowserController {
       app.getStartupArgs().each{
           //println "${it}"
           String val = it
+/*
 //griffon run-app Provisional correspondence  start==>
           if(val.startsWith("'")){
             val = val.replaceAll("'","")
@@ -26,11 +27,12 @@ class HudsonBrowserController {
             argsSet.put(key,val)
           }
 //griffon run-app Provisional correspondence  end<==
-          else{
+*/
+          //else{
 						String[] sp = val.split("=")
 						println "(${sp[0]},${sp[1]})"
             argsSet.put(sp[0],sp[1])
-          }
+          //}
       }
 			if(argsSet.containsKey("--hudsonUrl")){
 				model.hudsonUrl = argsSet.get("--hudsonUrl")

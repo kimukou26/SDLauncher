@@ -38,8 +38,8 @@ import java.nio.channels.*
 			 fc.close()
 			 fos.close()
 			 
-			 Map arg = new HashMap()
-			 griffon.util.ApplicationHolder.application.config.controller.mvcGroupDestroy(arg) //db close connection
+			 //Map arg = new HashMap()
+			 griffon.util.ApplicationHolder.application.config.controller.mvcGroupDestroy();//arg) //db close connection
 		 }
 	 }
  )

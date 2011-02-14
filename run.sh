@@ -6,4 +6,4 @@ export JAVA_OPTS='-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8'
 
 export PATH=$JAVA_HOME/bin:$GROOVY_HOME/bin:$GRIFFON_HOME/bin
 
-griffon run-app '--port=38080' '--useOutSidePort=true' '--openBrowser=false'
+griffon run-app --port=38080 --useOutSidePort=true --openBrowser=false

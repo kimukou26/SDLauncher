@@ -1,6 +1,7 @@
 import net.miginfocom.swing.MigLayout
 
-application(title:'HudsonBrowser', size:[300, 400], show:true, pack:true, locationByPlatform:true) {
+//application(title:'HudsonBrowser', size:[300, 400], show:true, pack:true, locationByPlatform:true) {
+application(title:'JenkinsBrowser', size:[300, 400], show:true, pack:true, locationByPlatform:true) {
   panel(id:'rootPanel') {
     cardSwitcher = cardLayout()
     panel(constraints:'login', layout:new MigLayout()) {

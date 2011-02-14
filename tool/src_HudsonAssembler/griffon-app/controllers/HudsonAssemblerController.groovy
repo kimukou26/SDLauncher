@@ -11,7 +11,8 @@ class HudsonAssemblerController {
     def view
 
     void mvcGroupInit(Map args) {
-        def jsonp = new URL('http://updates.hudson-labs.org/update-center.json').text
+        //def jsonp = new URL('http://updates.hudson-labs.org/update-center.json').text
+        def jsonp = new URL('http://updates.jenkins-ci.org/update-center.json').text
         def jsonText = jsonp.substring(jsonp.indexOf('(') + 1, jsonp.lastIndexOf(')')).trim()
         def json = new JsonSlurper().parseText(jsonText)
         model.coreUrl = json.core.url
@@ -35,6 +36,7 @@ class HudsonAssemblerController {
           //println "${it}"
           String val = it
 //griffon run-app Provisional correspondence  start==>
+/*
           if(val.startsWith("'")){
             val = val.replaceAll("'","")
             key = val
@@ -44,12 +46,13 @@ class HudsonAssemblerController {
 						println "(${key},${val})"
             argsSet.put(key,val)
           }
+*/
 //griffon run-app Provisional correspondence  end<==
-          else{
+          //else{
 						String[] sp = val.split("=")
 						println "(${sp[0]},${sp[1]})"
             argsSet.put(sp[0],sp[1])
-          }
+          //}
       }
 			model.xmlCurPath = System.getProperty('user.home')
 			model.warCurPath = System.getProperty('user.home')
@@ -87,7 +90,12 @@ class HudsonAssemblerController {
             resolveDependencies model.plugins, model.plugins.findAll { it.install }
             view.pluginTable.enabled = false
             try {
-                def jar = new JarInputStream(toInputStream(model.coreUrl, 'hudson.war'))
+                //def jar = new JarInputStream(toInputStream(model.coreUrl, 'hudson.war'))
+								def jar = null
+                try{
+									jar = new JarInputStream(toInputStream(model.coreUrl, 'hudson.war'))
+								}
+								catch(Exception ex){ ex.printStackTrace()}
                 def dest = new JarOutputStream(evt.source.selectedFile.newOutputStream(), jar.getManifest());
                 def defaultPlugins = []
                 def entry
@@ -117,14 +125,20 @@ class HudsonAssemblerController {
     }
 
     def toInputStream = { url, name ->
+				//println "$url,$name"
         def u = new URL(url)
         def uc = u.openConnection()
-				
+				//println "uc = $uc"
+			
 //griffon 0.9 instead add start
         def result = new ProgressMonitorInputStream(app.windowManager.windows[0], "Downloading $name", uc.inputStream)
         //def result = new ProgressMonitorInputStream(app.appFrames[0], "Downloading $name", uc.inputStream)
 //griffon 0.9 instead add end
+				//println "contentLength = ${uc.contentLength}"
+				//println "P: result.progressMonitor.maximum $result.progressMonitor.maximum"
         result.progressMonitor.maximum = uc.contentLength
+				//println "A: result.progressMonitor.maximum $result.progressMonitor.maximum"
+				println "result=${result.dump()}"
         return result
     }
 
