@@ -3,11 +3,11 @@ bin/*
 dist/*
 target/*
 CHANGE ME
-tool/src_HudsonAssembler/staging/*
-tool/src_HudsonAssembler/bin/*
-tool/src_HudsonAssembler/dist/*
-tool/src_HudsonAssembler/target/*
-tool/src_HudsonAssembler/CHANGE ME
+tool/src_jenkins-assembler/staging/*
+tool/src_jenkins-assembler/bin/*
+tool/src_jenkins-assembler/dist/*
+tool/src_jenkins-assembler/target/*
+tool/src_jenkins-assembler/CHANGE ME
 tool/src_HudsonBrowser/staging/*
 tool/src_HudsonBrowser/bin/*
 tool/src_HudsonBrowser/dist/*

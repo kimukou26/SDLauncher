@@ -122,8 +122,8 @@ def copySetting(distDir){
     fileset(dir: srcDir, includes: '*.txt')
   }
 
-  srcDir  = "${basedir}/tool/HudsonAssembler"
-  setting_dir = "${destDir}/tool/HudsonAssembler"
+  srcDir  = "${basedir}/tool/jenkins-assembler"
+  setting_dir = "${destDir}/tool/jenkins-assembler"
   ant.mkdir(dir:setting_dir)
   ant.copy(todir: setting_dir, overwrite: true ) {
     fileset(dir: srcDir)
@@ -203,8 +203,8 @@ def copySettingExe={destDir->
     fileset(dir: srcDir, includes: '*.txt')
   }
 
-  srcDir  = "${basedir}/tool/HudsonAssembler"
-  setting_dir = "${destDir}/tool/HudsonAssembler"
+  srcDir  = "${basedir}/tool/jenkins-assembler"
+  setting_dir = "${destDir}/tool/jenkins-assembler"
   ant.mkdir(dir:setting_dir)
   ant.copy(todir: setting_dir, overwrite: true ) {
     fileset(dir: srcDir)

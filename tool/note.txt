@@ -1,10 +1,10 @@
-Compile of griffon-0.9.2-beta-1
+Compile of griffon-0.9.2-rc1
 
-HudsonAssembler
-	
+jenkins-assembler	
 	Owners: @kiy0taka
-		http://code.google.com/p/hudson-assembler/
-	note:	
+		http://code.google.com/p/jenkins-assembler/
+
+	note:	(old HudsonAssembler version)
 		http://d.hatena.ne.jp/masanobuimai/20091025/1256474442
 
 
