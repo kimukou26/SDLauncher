@@ -1,9 +1,10 @@
 >SDLoader StandAlone Clone(use griffon)
 
 >remarks
-	The application has not been normally ended.
-	Need java process kill taskmanager
-
+	EThe application has not been normally ended.
+		Need java process kill taskmanager
+	Erun-app is twice openbrowser.
+		It is an investigating the cause now.
 
 >need enviroments 
 
