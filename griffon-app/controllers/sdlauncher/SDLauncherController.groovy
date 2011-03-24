@@ -27,10 +27,10 @@ class SDLauncherController {
           //griffon.effects.Effects.fade(view.frame, wait: true)
           app.shutdown()
       }
-			Map args = [controller:app.config.controller,
-									service:app.config.service,
-									view:app.config.view,
-									model:app.config.model]
+      Map args = [controller:app.config.controller,
+                  service:app.config.service,
+                  view:app.config.view,
+                  model:app.config.model]
       service.mvcGroupDestroy(args)
     }
     

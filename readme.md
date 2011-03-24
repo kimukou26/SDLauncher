@@ -1,8 +1,30 @@
 >SDLoader StandAlone Clone(use griffon)
 
+>remarks
+	The application has not been normally ended.
+	Need java process kill taskmanager
+
+
+>need enviroments 
+
+	jdk6u24
+	griffonw.bat or sh griffonw
+		or
+	jdk6u24
+	griffon 0.9.2-rc-1 http://griffon.codehaus.org/
+
+
+>griffonw.bat running
+	griffonw.bat run-app
+
+	Error Occuered,
+		griffonw.bat clean
+		griffonw.bat run-app
+	again
+	(first running plugin download,compile fails occasionally )
 
 >Use Library
-	griffon 0.9.2-beta-1
+	griffon 0.9.2-rc-1
 		http://griffon.codehaus.org/
 	sdloader
 		http://code.google.com/p/sdloader/
