@@ -67,8 +67,8 @@ eventGenerateJNLPStart = {
 
 
 //--------------------------------------------------------------------------------------------
-def copySetting(distDir){
-	println "==copySetting(${distDir})=="
+def copySetting(destDir){
+	println "==copySetting(${destDir})=="
   //ROOT
   srcDir  = "${basedir}/setting"
   ant.mkdir(dir:destDir)
@@ -139,7 +139,7 @@ def copySetting(distDir){
 }
 
 def copySettingExe={destDir->
-	println "==copySettingExe(${distDir})=="
+	println "==copySettingExe(${destDir})=="
   //ROOT
   println "destDir=${destDir}"
   srcDir  = "${basedir}/setting"
