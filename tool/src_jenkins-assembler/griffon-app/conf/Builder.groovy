@@ -14,3 +14,5 @@ jx {
 }
 
 root.'griffon.builder.swingxtras.SwingxtrasBuilder'.view = '*'
+
+root.'SplashGriffonAddon'.addon=true

@@ -13,5 +13,4 @@
  */
 
 	
-    SplashScreen.getInstance().dispose()
-
+    

@@ -25,10 +25,14 @@ environments {
         signingkey {
             params {
                 sigfile = 'GRIFFON'
-                keystore = "${System.getProperty('user.home')}/.keystore"
-                alias = 'JenkinsAssemblerKey'
-                storepass = null
-                keypass = null
+                keystore = "$basedir/../../debug.keystore"
+                alias = 'androiddebugkey'
+                storepass = 'android'
+                keypass   = 'android'
+                //keystore = "${System.getProperty('user.home')}/.keystore"
+                //alias = 'JenkinsAssemblerKey'
+                //storepass = null
+                //keypass = null
                 lazy = false
             }
         }
