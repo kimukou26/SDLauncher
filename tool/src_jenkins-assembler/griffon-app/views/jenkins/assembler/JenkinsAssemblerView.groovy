@@ -74,9 +74,10 @@ application(title:'JenkinsAssembler',
 
     sorter = new TableRowSorter(tableModel)
     table.rowSorter = sorter
-    search = searchField(prompt:'Search plugins', constraints:NORTH, actionPerformed:{
+    search = searchField(prompt:'Search plugins', constraints:NORTH, outerMargin:[0,0,100,50], actionPerformed:{
         sorter.rowFilter = {
             def plugin = model.plugins[it.identifier]
+println plugin
             return "${plugin.name} ${plugin.displayName} ${plugin.wiki}".toLowerCase()
                 .indexOf(search.text.toLowerCase()) >= 0
         } as RowFilter

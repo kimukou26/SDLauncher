@@ -1,6 +1,7 @@
 application {
 	title="HudsonBrowser"
 	startupGroups=["HudsonBrowser"]
+	autoShutdown = true
 }
 mvcGroups {
 	HudsonBuild {
